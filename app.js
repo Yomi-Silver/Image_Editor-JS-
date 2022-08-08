@@ -1,22 +1,34 @@
-const imageLoader = document.getElementById("choose");
-const showImg = document.getElementById("image");
-const file = document.getElementById("file");
-// let imageLoaded = document.getElementById("image");
-file.style.visibility = "hidden";
+const fileInput = document.getElementById("fileInput");
+const chooseImgBtn = document.getElementById("imageBtn");
+const showImg = document.querySelector("#image_view img");
+const container = document.querySelector(".container");
+fileInput.style.visibility = "hidden";
 
-const imageLoad = function () {
-  let mgg = file.files[0];
-  console.log(mgg);
-  if (!mgg) return;
-  //    console.log("no image was selected");
-  //let chosen image show on showImg
-
-  showImg.src = URL.createObjectURL(mgg);
+const loadImg = () => {
+  let file = fileInput.files[0];
+  if (!file) return;
+  showImg.src = URL.createObjectURL(file);
+  showImg.addEventListener("load", () => {
+    container.classList.remove("disable");
+  });
+  //   console.log(file);
 };
-
-file.addEventListener("change", imageLoad);
-
-imageLoader.addEventListener("click", function () {
-  //   file.style.visibility = "visible";
-  file.click();
+fileInput.addEventListener("change", loadImg);
+chooseImgBtn.addEventListener("click", function () {
+  fileInput.click();
 });
+
+// const imageLoad = function () {
+//   let enteredFile = fileInput.files[0];
+//   console.log(enteredFile);
+//   if (!enteredFile) return;
+//   console.log(enteredFile);
+//   showImg.src = URL.createObjectURL(enteredFile);
+// };
+
+// fileInput.addEventListener("change", imageBtn());
+
+// imageBtn.addEventListener("click", function () {
+//   //   file.style.visibility = "visible";
+//   file.click();
+// });

@@ -28,6 +28,7 @@
 }
 
 
+
 .secondContained {
      display: flex;
      justify-content: space-around;
@@ -49,6 +50,11 @@
      width: 300px;
      height: 400px;
      border-radius: 4px;
+}
+.container.disable :where(.contentHolder, .resetFilters, .save-img) {
+     opacity: 0.6;
+     pointer-events: none;
+     /* display: none; */
 }
 
 .buttons {
