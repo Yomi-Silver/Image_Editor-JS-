@@ -20,20 +20,24 @@
                                    <h4 class="filters">
                                         Filters
                                    </h4>
-                                   <div class="buttons">
-                                        <button>Brightness</button>
-                                        <button>Saturation</button>
+                                   <div class="filter">
+                                        <div class="buttons btn active">
+                                             <button id="brightness" class="active">Brightness</button>
+                                             <button id="saturation">Saturation</button>
                                    </div>
                                    <div class="buttons second">
-                                        <button class="blue">Inversion</button>
-                                        <button>Grayscale</button>
+                                        <button id="inversion" class="blue">Inversion</button>
+                                        <button id="grayscale">Grayscale</button>
                                    </div>
                               </div>
-                              <div class="range">
-                                   <p>Inversion</p>
-                                   <p>0%</p>
                               </div>
+                              <div class="slider">
+                                   <div class="range filter-name">
+                                        <p class="name">Inversion</p>
+                                        <p class="value">0%</p>
+                                   </div>
                               <input type="range" name="range" id="range" value="100" min="0" max="200">
+                              </div>
                               <h5>Rotate & Flip</h5>
                               <div class="rotateAndFlip">
                                    <button>fig</button>
