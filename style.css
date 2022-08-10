@@ -93,12 +93,12 @@
      margin-bottom: 10px;
 }
 
-.rotateAndFlip {
+.rotateFlip {
      display: flex;
 
 }
 
-.rotateAndFlip button {
+.rotateFlip button {
      padding: 15px 22px;
      margin-left: 5px;
 
@@ -109,6 +109,8 @@
      margin-bottom: 20px;
      width: 500px;
      height: 400px;
+     overflow: hidden;
+
 }
 
 .image img {
@@ -154,3 +156,6 @@
      color: #fff;
      transition: .3s ease-out;
 }
+
+
+@media screen
